@@ -28,6 +28,7 @@ export class UserFormComponent implements OnInit {
     amount: new FormControl(''),
     discAmount: new FormControl(''),
     discType: new FormControl(''),
+    serchBox : new FormControl(''),
   });
   edit_id: any;
   del_id: any;
@@ -49,6 +50,10 @@ export class UserFormComponent implements OnInit {
   calcTotal() {
     this.totalAmount += parseInt(this.userForm.value.amount);
     return this.totalAmount;
+  }
+
+  serchRecord(){
+    console.log("SerchButton clicked");
   }
  
   onSubmit() {
